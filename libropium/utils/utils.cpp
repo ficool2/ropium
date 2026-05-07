@@ -38,7 +38,7 @@ vector<RawGadget>* raw_gadgets_from_file(string filename){
             // First the gadget address
             if( c == '$' ){
                 try{
-                    raw.addr = std::stoi(addr_str, 0, 16);
+                    raw.addr = std::stoull(addr_str, 0, 16);
                     if( raw.addr == 0 )
                         throw std::invalid_argument("");
                     got_addr = true;
